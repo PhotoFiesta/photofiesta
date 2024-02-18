@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "994586725816",
+    "project_id": "photofiesta",
+    "storage_bucket": "photofiesta.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:994586725816:android:ad7793d32f891c3ce6d34d",
+        "android_client_info": {
+          "package_name": "com.example.photofiesta"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHBmrL7CbtIH7rJlzjG4S6bmJ1MGeVrP0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
