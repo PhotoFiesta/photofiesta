@@ -12,6 +12,4 @@ class AppRoute extends Equatable {
 
 class AppRoutes {
   static AppRoute get register => const AppRoute('register');
-
-  static AppRoute get test => const AppRoute('test');
 }
