@@ -13,6 +13,7 @@ class PseudoScreen extends StatefulWidget {
 
 class _PseudoScreenState extends State<PseudoScreen> {
   String pseudo = '';
+  FocusNode inputFocusNode = FocusNode();
 
   void onPseudoChanged(String value) {
     setState(() {
@@ -22,6 +23,8 @@ class _PseudoScreenState extends State<PseudoScreen> {
 
   @override
   Widget build(BuildContext context) {
+    inputFocusNode.requestFocus();
+
     return Scaffold(
       backgroundColor: AppColors.yellowBackground,
       body: SafeArea(
@@ -37,6 +40,7 @@ class _PseudoScreenState extends State<PseudoScreen> {
                 horizontal: 48,
               ),
               child: AppTextInput(
+                focusNode: inputFocusNode,
                 onChanged: onPseudoChanged,
               ),
             ),
