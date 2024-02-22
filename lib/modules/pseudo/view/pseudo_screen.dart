@@ -21,6 +21,10 @@ class _PseudoScreenState extends State<PseudoScreen> {
     });
   }
 
+  void goToNextScreen() {
+    // TODO(anyone): Implement the navigation to the next screen
+  }
+
   @override
   Widget build(BuildContext context) {
     inputFocusNode.requestFocus();
@@ -42,11 +46,14 @@ class _PseudoScreenState extends State<PseudoScreen> {
               child: AppTextInput(
                 focusNode: inputFocusNode,
                 onChanged: onPseudoChanged,
+                onFieldSubmitted: (_) {
+                  goToNextScreen();
+                },
               ),
             ),
             const Gap(20),
             ContinueButton(
-              onPressed: () {},
+              onPressed: goToNextScreen,
             ),
             const Gap(30),
           ],
