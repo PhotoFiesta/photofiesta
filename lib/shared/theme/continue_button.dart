@@ -10,7 +10,7 @@ class ContinueButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onPressed,
-      child: Container(
+      child: Ink(
         padding: const EdgeInsets.symmetric(
           horizontal: 36,
           vertical: 10,
