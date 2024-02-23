@@ -10,7 +10,8 @@ class RegisterScreen extends StatelessWidget {
       backgroundColor: AppColors.yellowBackground,
       body: SafeArea(
         child: Center(
-          child: Text('Register'),
+          child: Text('Register',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
         ),
       ),
     );
