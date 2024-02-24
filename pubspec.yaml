@@ -44,6 +44,8 @@ dependencies:
   flutter_launcher_icons: ^0.13.1
   flutter_svg: ^2.0.9
   gap: ^3.0.1
+  google_sign_in: ^6.2.1
+  firebase_auth: ^4.17.5
 
 dev_dependencies:
   flutter_test:
