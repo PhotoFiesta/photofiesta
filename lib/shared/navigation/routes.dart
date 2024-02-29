@@ -14,4 +14,6 @@ class AppRoutes {
   static AppRoute get register => const AppRoute('register');
 
   static AppRoute get pseudo => const AppRoute('pseudo');
+
+  static AppRoute get homepage => const AppRoute('homepage');
 }
