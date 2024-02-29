@@ -37,7 +37,8 @@ class _PseudoScreenState extends State<PseudoScreen> {
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('Entrez un pseudo'),
+            const Text('Entrez un pseudo',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 28)),
             const Gap(40),
             Padding(
               padding: const EdgeInsets.symmetric(
