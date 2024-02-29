@@ -48,6 +48,7 @@ class HomepageScreen extends StatelessWidget {
                 const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      Gap(20),
                       Text(
                         'Bonjour Ananas 👋',
                         style: TextStyle(
