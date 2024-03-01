@@ -46,6 +46,7 @@ dependencies:
   gap: ^3.0.1
   google_sign_in: ^6.2.1
   firebase_auth: ^4.17.5
+  cloud_firestore: ^4.15.6
 
 dev_dependencies:
   flutter_test:
