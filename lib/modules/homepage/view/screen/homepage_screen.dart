@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
+import 'package:photofiesta/modules/homepage/view/widgets/bubble.dart';
 import 'package:photofiesta/modules/homepage/view/widgets/homepage_button.dart';
 import 'package:photofiesta/shared/theme/colors.dart';
 
@@ -21,29 +22,15 @@ class HomepageScreen extends StatelessWidget {
             child: Stack(
               clipBehavior: Clip.none,
               children: [
-                Positioned(
+                const Positioned(
                   top: -150,
                   right: -150,
-                  child: Container(
-                    width: bubbleDiameter,
-                    height: bubbleDiameter,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: AppColors.yellowBubble,
-                    ),
-                  ),
+                  child: Bubble(diameter: bubbleDiameter),
                 ),
-                Positioned(
+                const Positioned(
                   bottom: -150,
                   left: -100,
-                  child: Container(
-                    width: bubbleDiameter,
-                    height: bubbleDiameter,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: AppColors.yellowBubble,
-                    ),
-                  ),
+                  child: Bubble(diameter: bubbleDiameter),
                 ),
                 const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
