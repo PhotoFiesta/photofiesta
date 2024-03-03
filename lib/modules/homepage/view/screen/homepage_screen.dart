@@ -16,7 +16,7 @@ class HomepageScreen extends StatelessWidget {
       backgroundColor: AppColors.yellowBackground,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24).copyWith(),
+          padding: const EdgeInsets.symmetric(horizontal: 24),
           child: Stack(
             clipBehavior: Clip.none,
             children: [
