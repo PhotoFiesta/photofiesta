@@ -10,4 +10,5 @@ abstract final class AppColors {
   static const Color blueGradientEnd = Color(0xFF0FB4FC);
 
   static const Color greyText = Color(0xFF545454);
+  static const Color greyBackground = Color(0xFF5D5D5A);
 }

@@ -22,6 +22,16 @@ class _PseudoScreenState extends State<PseudoScreen> {
   }
 
   void goToNextScreen() {
+    if (pseudo.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          backgroundColor: AppColors.greyBackground,
+          content: Center(
+              child: Text('C\'est vide ! 😡',
+                  style: TextStyle(color: Colors.white, fontSize: 16))),
+        ),
+      );
+    }
     // TODO(anyone): Implement the navigation to the next screen
   }
 
@@ -55,6 +65,7 @@ class _PseudoScreenState extends State<PseudoScreen> {
             const Gap(20),
             ContinueButton(
               onPressed: goToNextScreen,
+              isDisabled: pseudo.isEmpty,
             ),
             const Gap(30),
           ],
