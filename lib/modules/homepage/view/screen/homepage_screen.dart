@@ -15,27 +15,27 @@ class HomepageScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.yellowBackground,
       body: SafeArea(
-        child: SizedBox(
-          width: double.infinity,
-          child: Padding(
-            padding: const EdgeInsets.all(24),
-            child: Stack(
-              clipBehavior: Clip.none,
-              children: [
-                const Positioned(
-                  top: -150,
-                  right: -150,
-                  child: Bubble(diameter: bubbleDiameter),
-                ),
-                const Positioned(
-                  bottom: -150,
-                  left: -100,
-                  child: Bubble(diameter: bubbleDiameter),
-                ),
-                const Column(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24).copyWith(),
+          child: Stack(
+            clipBehavior: Clip.none,
+            children: [
+              const Positioned(
+                top: -150,
+                right: -150,
+                child: Bubble(diameter: bubbleDiameter),
+              ),
+              const Positioned(
+                bottom: -150,
+                left: -100,
+                child: Bubble(diameter: bubbleDiameter),
+              ),
+              const Padding(
+                padding: EdgeInsets.only(top: 40),
+                child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
                     children: [
-                      Gap(20),
                       Text(
                         'Bonjour Ananas 👋',
                         style: TextStyle(
@@ -51,44 +51,36 @@ class HomepageScreen extends StatelessWidget {
                           )),
                       Gap(60),
                     ]),
-                Expanded(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SizedBox(
-                        width: double.infinity,
-                        child: HomepageButton(
-                            iconAction: SvgPicture.asset('assets/svg/play.svg'),
-                            label: 'Créer une partie',
-                            illustration: SvgPicture.asset(
-                                'assets/svg/competition_outline.svg'),
-                            backGroundLinearGradient: const LinearGradient(
-                                colors: [
-                                  AppColors.pinkGradientStart,
-                                  AppColors.pinkGradientEnd
-                                ]),
-                            onPressed: () {}),
-                      ),
-                      const Gap(60),
-                      SizedBox(
-                        width: double.infinity,
-                        child: HomepageButton(
-                            iconAction: SvgPicture.asset('assets/svg/add.svg'),
-                            label: 'Rejoindre une partie',
-                            illustration: SvgPicture.asset(
-                                'assets/svg/winner_outline.svg'),
-                            backGroundLinearGradient: const LinearGradient(
-                                colors: [
-                                  AppColors.blueGradientStart,
-                                  AppColors.blueGradientEnd
-                                ]),
-                            onPressed: () {}),
-                      ),
-                    ],
-                  ),
+              ),
+              Expanded(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    HomepageButton(
+                        iconAction: SvgPicture.asset('assets/svg/play.svg'),
+                        label: 'Créer une partie',
+                        illustration: SvgPicture.asset(
+                            'assets/svg/competition_outline.svg'),
+                        backGroundLinearGradient: const LinearGradient(colors: [
+                          AppColors.pinkGradientStart,
+                          AppColors.pinkGradientEnd
+                        ]),
+                        onPressed: () {}),
+                    const Gap(60),
+                    HomepageButton(
+                        iconAction: SvgPicture.asset('assets/svg/add.svg'),
+                        label: 'Rejoindre une partie',
+                        illustration:
+                            SvgPicture.asset('assets/svg/winner_outline.svg'),
+                        backGroundLinearGradient: const LinearGradient(colors: [
+                          AppColors.blueGradientStart,
+                          AppColors.blueGradientEnd
+                        ]),
+                        onPressed: () {}),
+                  ],
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
