@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:photofiesta/shared/theme/colors.dart';
 
 class ContinueButton extends StatelessWidget {
-  const ContinueButton({super.key, required this.onPressed});
+  const ContinueButton({
+    super.key,
+    required this.onPressed,
+    this.isDisabled = false,
+  });
 
   final void Function() onPressed;
+
+  final bool isDisabled;
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +23,7 @@ class ContinueButton extends StatelessWidget {
           vertical: 10,
         ),
         decoration: BoxDecoration(
-          color: Colors.black,
+          color: isDisabled ? AppColors.greyBackground : Colors.black,
           borderRadius: BorderRadius.circular(10),
         ),
         child: SvgPicture.asset('assets/svg/right_arrow.svg'),
