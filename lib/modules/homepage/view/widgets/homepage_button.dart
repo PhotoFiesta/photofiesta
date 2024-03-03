@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:gap/gap.dart';
 
 class HomepageButton extends StatelessWidget {
   const HomepageButton({
@@ -37,39 +38,36 @@ class HomepageButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(30),
             onTap: onPressed,
             child: Ink(
+              padding: const EdgeInsets.symmetric(vertical: 24, horizontal: 18),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30),
                 gradient: backGroundLinearGradient,
               ),
-              child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 24, horizontal: 18),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(4),
-                      decoration: BoxDecoration(
-                        border: Border.all(
-                          color: Colors.white,
-                          width: 2,
-                        ),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: iconAction,
-                    ),
-                    const SizedBox(height: 20),
-                    Text(
-                      label,
-                      style: const TextStyle(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Container(
+                    padding: const EdgeInsets.all(4),
+                    decoration: BoxDecoration(
+                      border: Border.all(
                         color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
+                        width: 2,
                       ),
+                      borderRadius: BorderRadius.circular(10),
                     ),
-                  ],
-                ),
+                    child: iconAction,
+                  ),
+                  const Gap(20),
+                  Text(
+                    label,
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
